@@ -1,3 +1,4 @@
-<h1>
-  {{title}}
-</h1>
+<div *ngFor="let item of imgGroup; let num = index;" (click)="showViewer(item.src, num)">
+  <img [src]="item.src" [id]="'img' + num" alt="" (load)="imgLoad(num)">
+</div>
+<ng-viewer-component *ngIf="imageViewer.show" [imageViewer]="imageViewer" (closeViewer)="closeViewerEmit()"></ng-viewer-component>
