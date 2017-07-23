@@ -46,7 +46,7 @@ export class AppComponent {
     this.imageViewer.result[num].width = img.naturalWidth;
     this.imageViewer.result[num].height = img.naturalHeight;
   }
-  private closeViewerEmit(){
+  private closeViewerEmit() {
     document.getElementsByTagName('body')[0].style.overflow = 'auto';
   }
 }
